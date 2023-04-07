@@ -11,7 +11,7 @@ spec:
       spec:
         containers:
            -name: ipapp
-            image:  ankit969/nginx:2.0.0
+            image: ankit969/nginx:2.0.0
             ports:
               containerPort: 80
     selector:  

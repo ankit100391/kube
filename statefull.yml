@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: 
+    name: ip_app_statefulset
+spec:
+   replicas: 2
+   template:
+      metadate:
+          lables:
+            app: ip-app-sfs
+      spec:
+        containers:
+           -name: ipapp
+            inage:  ankit969/nginx:2.0.0
+            ports:
+              containerPort: 80
+    selector:  
+       matchlabels: 
+            app: ip-app-sfs
+
+
+apiVersion: v1
+kind: Service
+metadata: 
+    name: ip-app-headless-svc
+spec:         
+    clusterIP: None
+    selector:
+        app: ip-app-sfs
+    ports:
+      -name: http
+       port: 30008
+       targetPort: 80     
+
+                         

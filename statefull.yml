@@ -13,12 +13,12 @@ spec:
            -name: ipapp
             image: ankit969/nginx:2.0.0
             ports:
-              containerPort: 80
+              -containerPort: 80
     selector:  
-       matchlabels: 
+       matchLabels: 
             app: ip-app-sfs
 
-
+---
 apiVersion: v1
 kind: Service
 metadata: 
@@ -29,7 +29,7 @@ spec:
         app: ip-app-sfs
     ports:
       -name: http
-       port: 30008
+       port: 30006
        targetPort: 80     
 
                          

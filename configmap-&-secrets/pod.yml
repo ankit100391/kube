@@ -11,12 +11,11 @@ spec:
     env:
     - name: ENVIRONMENT
       valueFrom:
-      configMapKeyRef:
-        name: my-confimap
-        key: env
-    - name: app
+        configMapKeyRef:
+          name: my-confimap
+          key: env
+    - name: APP_NAME
       valueFrom:
-      configMapKeyRef:
-        name: my-confimap
-        key: app
-
+        configMapKeyRef:
+          name: my-confimap
+          key: app

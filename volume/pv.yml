@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: persistentVolume
+metadate:
+  name: my-pvc
+spec:
+  storageClassName: local
+  accessMode:
+  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  hostpath:
+    path: '/home/'

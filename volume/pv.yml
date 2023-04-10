@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: persistentVolume
-metadate:
+metadata:
   name: my-pv
 spec:
   storageClassName: local
-  accessMode:
+  accessModes:
   - ReadWriteOnce
   capacity:
     storage: 2Gi

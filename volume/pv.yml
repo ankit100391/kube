@@ -1,5 +1,9 @@
 apiVersion: v1
+<<<<<<< HEAD
 kind: PersistentVolume
+=======
+kind: persistentVolume
+>>>>>>> e3997470912922cbb32606d76a8ad77feb1b6db1
 metadata:
   name: my-pv
 spec:

@@ -1,0 +1,7 @@
+apiVersion: vi
+kind: secret
+metadata:
+    name: k8s-sa-token
+    annotations:
+       kubernetes.io/service-account.name: k8s-sa
+    type: kubernetes.io/service-account-token   

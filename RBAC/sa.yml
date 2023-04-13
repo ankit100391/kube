@@ -1,0 +1,4 @@
+apiVersion: vi
+kind: serviceAccount
+metadata:
+  name: k8s-sa

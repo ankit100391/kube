@@ -4,13 +4,14 @@ metadata:
   name: k8s-sa-role-binding
   namespace: default
 subjects:
-  kind: serviceAccount
+- kind: ServiceAccount
   name: k8s-sa
   namespace: default
 roleRef:
   apiGroup: rbac.authorization.k8s.io
+  kind: Role
   name: k8s-sa-role
-
+  
 
 
 

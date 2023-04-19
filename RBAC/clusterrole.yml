@@ -1,9 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: clusterRole
+kind: ClusterRole
 metadata:
   name: k8s-sa-role
-  namespace: default
 rules:
-  apiGroup: [""]
+- apiGroups: [""]
   resources: ["deployments"]
   verbs: ["list", "update", "create", "delete"]

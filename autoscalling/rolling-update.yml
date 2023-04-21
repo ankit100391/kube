@@ -9,9 +9,9 @@ spec:
       app: nginx-server
   strategy:
     type: RollingUpdate
-    rollinfUpdate:
-    maxUnavailable: 40%
-    maxSurge: 1
+    rollingUpdate:
+      maxUnavailable: 50%
+      maxSurge: 1
   template:
     metadata:
       labels:
@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:1.24.0
         ports:
         - containerPort: 80

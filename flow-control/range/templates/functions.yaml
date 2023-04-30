@@ -5,10 +5,10 @@ metadata:
 data:
   myvalue: "Hello World"
   {{- with .Values.favorite }}
-  drink: {{ .drink | default "tea" | quote }}
+  drink: {{ .drink | default "tea" }}
   food: {{ .food | upper | quote }}
   {{- end }}
   toppings: |-
     {{- range .Values.pizzaToppings }}
-    - {{ . | title | quote }}
+       - {{ . | title |upper | quote }}
     {{- end }}
